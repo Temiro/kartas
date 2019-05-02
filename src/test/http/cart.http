@@ -1,0 +1,80 @@
+POST http://localhost:8088/labas/api/cart
+Accept: application/json
+Content-Type: application/json
+
+{}
+
+###
+
+GET http://localhost:8088/labas/api/cart
+Accept: application/json
+Content-Type: application/json
+
+{}
+
+###
+GET http://localhost:8088/labas/api/cart
+Accept: application/json
+Content-Type: application/json
+Cookie: JSESSIONID=71443895C64E16E46F68C6BAA7C63040
+
+{}
+
+###
+
+
+# ADD ĮDEDAMA NAUJA PREKĖ Į KREPŠELĮ
+POST http://localhost:8088/labas/api/cart/add
+Accept: application/json
+Content-Type: application/json
+Cookie: JSESSIONID=71443895C64E16E46F68C6BAA7C63040
+
+
+{
+  "id": 2,
+  "qty": 100
+}
+
+###
+
+POST http://localhost:8088/labas/api/cart/add
+Content-Type: application/json
+Accept: application/json
+Cookie: JSESSIONID=71443895C64E16E46F68C6BAA7C63040
+
+{
+  "id": 1,
+  "qty": 2
+}
+
+###
+# GET atspausdianami visi krepšeliai su prekėmis - blogai: ima atsitiktini skaičių prekių
+GET http://localhost:8088/labas/api/cart/list
+Content-Type: application/json
+Accept: application/json
+#Cookie: JSESSIONID=71443895C64E16E46F68C6BAA7C63040
+
+
+
+###
+
+# GET atspausdianami visi krepšeliai su prekėmis - blogai: ima atsitiktini skaičių prekių
+GET http://localhost:8088/labas/api/cart/1/f
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET http://localhost:8088/labas/api/cart
+Accept: application/json
+Content-Type: application/json
+Cookie: JSESSIONID=71443895C64E16E46F68C6BAA7C63040
+
+###
+
+DELETE http://localhost:8088/labas/api/cart/deleteCart/2
+Accept: application/json
+Content-Type: application/json
+Cookie: JSESSIONID=71443895C64E16E46F68C6BAA7C63040
+
+###

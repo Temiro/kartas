@@ -1,0 +1,66 @@
+# Tomcat: http://localhost:8080/ecommerce/
+# App -> /api
+# CartService -> /cart
+
+# CRUD
+
+# ADD sukuriamas tuščias krepšelis
+POST http://localhost:8080/ecommerce/api/cart
+Content-Type: application/json
+Accept: application/json
+
+{}
+
+###
+
+# ADD ĮDEDAMA NAUJA PREKĖ Į KREPŠELĮ
+POST http://localhost:8080/ecommerce/api/cart/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 1,
+  "qty": 100
+}
+
+###
+
+POST http://localhost:8080/ecommerce/api/cart/add
+Content-Type: application/json
+Accept: application/json
+#Cookie: JSESSIONID=E3F2C5AED2F11164483E4BBD737F29E0
+
+{
+  "id": 1,
+  "qty": 2
+}
+
+###
+# GET atspausdianami visi krepšeliai su prekėmis - blogai: ima atsitiktini skaičių prekių
+GET http://localhost:8080/ecommerce/api/cart/list
+Accept: application/json
+
+###
+
+# GET atspausdianami visi krepšeliai su prekėmis - blogai: ima atsitiktini skaičių prekių
+GET http://localhost:8080/ecommerce/api/cart/1/f
+Accept: application/json
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/ecommerce/api/cart
+Accept: application/json
+Content-Type: application/json
+Cookie: JSESSIONID=E3F2C5AED2F11164483E4BBD737F29E0
+
+###
+
+DELETE http://localhost:8080/ecommerce/api/cart/deleteCart/1
+Accept: application/json
+Content-Type: application/json
+Cookie: JSESSIONID=C6FF66813C182B1B3E24AAB1ED978C74
+
+###
+
+

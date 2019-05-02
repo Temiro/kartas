@@ -1,0 +1,46 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET requests with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST requests with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST requests to submit a form with a text or file field (multipart/form-data);
+###
+
+#
+#GET http://localhost:8088/labas/api/auth/list
+#Accept: application/json
+####
+#
+#POST http://localhost:8088/labas/api/auth/create
+#Accept: application/json
+#Content-Type: application/json
+#
+#{"username": "belekas@gmail.com","password": "ane123"
+#//,"role": "Guest"
+#}
+#
+
+###
+GET http://localhost:8088/labas/api/product/1000
+Accept: application/json
+###
+GET http://localhost:8088/labas/api/product/list?size=3&skip=2
+Accept: application/json
+Set-Cookie:
+
+###
+GET http://localhost:8088/labas/api/product/list
+Accept: application/json
+###
+PUT http://localhost:8088/labas/api/product/6
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 6,
+  "name": "Windows 2019",
+//  "description": "New features of Windows Vista include an updated graphical user interface and visual style dubbed Aero",
+  "price": 1.99,
+  "image": "https://upload.wikimedia.org/wikipedia/en/a/a3/Windows_Vista.png"
+}
+###

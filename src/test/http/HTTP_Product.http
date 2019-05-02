@@ -1,0 +1,47 @@
+# Tomcat: http://localhost:8080/ecommerce/
+# App -> /api
+# ProductService -> /product
+
+# CREATE
+POST http://localhost:8080/ecommerce/api/product
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Jaguar"
+}
+###
+
+# READ
+GET http://localhost:8080/ecommerce/api/product/2
+Accept: application/json
+
+###
+
+# READ_LIST
+GET http://localhost:8080/ecommerce/api/product/list
+Accept: application/json
+
+###
+
+# UPDATE
+PUT http://localhost:8080/ecommerce/api/product/3
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Porshe"
+}
+###
+
+
+# DELETE
+DELETE http://localhost:8080/ecommerce/api/product/5
+Accept: application/json
+Content-Type: application/json
+
+###
+
+
+
